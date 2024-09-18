@@ -1,0 +1,150 @@
+Index: app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<resources>\r\n    <color name=\"black\">#FF000000</color>\r\n    <color name=\"white\">#FFFFFFFF</color>\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/colors.xml b/app/src/main/res/values/colors.xml
+--- a/app/src/main/res/values/colors.xml	(revision 0bcb2cfec1711bb4670d249d0b53d754b0efef18)
++++ b/app/src/main/res/values/colors.xml	(date 1726674279669)
+@@ -1,5 +1,7 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+     <color name="black">#FF000000</color>
++    <color name="gray">#939393</color>
+     <color name="white">#FFFFFFFF</color>
++    <color name="light_brown">#C2663C</color>
+ </resources>
+\ No newline at end of file
+Index: app/src/main/res/values/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources xmlns:tools=\"http://schemas.android.com/tools\">\r\n    <!-- Base application theme. -->\r\n    <style name=\"Base.Theme.LAB_WEEK_4\" parent=\"Theme.Material3.DayNight.NoActionBar\">\r\n        <!-- Customize your light theme here. -->\r\n        <!-- <item name=\"colorPrimary\">@color/my_light_primary</item> -->\r\n    </style>\r\n\r\n    <style name=\"Theme.LAB_WEEK_4\" parent=\"Base.Theme.LAB_WEEK_4\" />\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/themes.xml b/app/src/main/res/values/themes.xml
+--- a/app/src/main/res/values/themes.xml	(revision 0bcb2cfec1711bb4670d249d0b53d754b0efef18)
++++ b/app/src/main/res/values/themes.xml	(date 1726674271630)
+@@ -5,5 +5,15 @@
+         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+     </style>
+ 
++    <style name="Theme.NavigationDrawer.NoActionBar"
++        parent="Theme.AppCompat.Light.NoActionBar">
++        <item name="windowActionBar">false</item>
++        <item name="windowNoTitle">true</item>
++    </style>
++    <style name="Theme.NavigationDrawer.AppBarOverlay"
++        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
++    <style name="Theme.NavigationDrawer.PopupOverlay"
++        parent="ThemeOverlay.AppCompat.Light" />
++
+     <style name="Theme.LAB_WEEK_4" parent="Base.Theme.LAB_WEEK_4" />
+ </resources>
+\ No newline at end of file
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <string name=\"app_name\">LAB_WEEK_4</string>\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+--- a/app/src/main/res/values/strings.xml	(revision 0bcb2cfec1711bb4670d249d0b53d754b0efef18)
++++ b/app/src/main/res/values/strings.xml	(date 1726674219908)
+@@ -1,3 +1,27 @@
+ <resources>
+-    <string name="app_name">LAB_WEEK_4</string>
++    <string name="app_name">LAB_WEEK_04</string>
++    <string name="app_title">Coffee App</string>
++    <string name="nav_header_desc">Navigation header</string>
++    <string name="menu_coffee">Coffee List</string>
++    <string name="menu_favorites">Favorite Coffee</string>
++    <string name="affogato_title">AFFOGATO</string>
++    <string name="affogato_desc">Espresso poured on a vanilla ice cream. Served in a
++cappuccino cup.</string>
++    <string name="americano_title">AMERICANO</string>
++    <string name="americano_desc">Espresso with added hot water (100-150 ml). Often
++served in a cappuccino cup. (The espresso is added into the hot water rather than
++all the water being flowed through the coffee that would lead to over
++extraction.)</string>
++    <string name="latte_title">CAFFE LATTE</string>
++    <string name="latte_desc">A tall, mild \'milk coffee\' (about 150-300 ml). An
++espresso with steamed milk and only a little milk foam poured over it. Serve in a
++latte glass or a coffee cup. Flavoured syrup can be added.</string>
++    <string name="coffee_list">Coffee List</string>
++    <string name="coffee_favorites">My Favorite Coffee</string>
++    <string name="cafe_list">Cafe List</string>
++    <string name="bottom_menu_coffee">Coffee</string>
++    <string name="bottom_menu_cafe">Cafe</string>
++    <string name="starbucks_title">STARBUCKS</string>
++    <string name="janjijiwa_title">JANJI JIWA</string>
++    <string name="kopikenangan_title">KOPI KENANGAN</string>
+ </resources>
+\ No newline at end of file
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\">\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\r\n        android:fullBackupContent=\"@xml/backup_rules\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.LAB_WEEK_4\"\r\n        tools:targetApi=\"31\">\r\n        <activity\r\n            android:name=\".MainActivity\"\r\n            android:exported=\"true\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(revision 0bcb2cfec1711bb4670d249d0b53d754b0efef18)
++++ b/app/src/main/AndroidManifest.xml	(date 1726674301703)
+@@ -14,10 +14,10 @@
+         tools:targetApi="31">
+         <activity
+             android:name=".MainActivity"
+-            android:exported="true">
++            android:exported="true"
++            android:theme="@style/Theme.NavigationDrawer.NoActionBar">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+-
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+         </activity>
+Index: app/build.gradle.kts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    alias(libs.plugins.android.application)\r\n    alias(libs.plugins.jetbrains.kotlin.android)\r\n}\r\n\r\nandroid {\r\n    namespace = \"com.example.lab_week_4\"\r\n    compileSdk = 34\r\n\r\n    defaultConfig {\r\n        applicationId = \"com.example.lab_week_4\"\r\n        minSdk = 24\r\n        targetSdk = 34\r\n        versionCode = 1\r\n        versionName = \"1.0\"\r\n\r\n        testInstrumentationRunner = \"androidx.test.runner.AndroidJUnitRunner\"\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            isMinifyEnabled = false\r\n            proguardFiles(\r\n                getDefaultProguardFile(\"proguard-android-optimize.txt\"),\r\n                \"proguard-rules.pro\"\r\n            )\r\n        }\r\n    }\r\n    compileOptions {\r\n        sourceCompatibility = JavaVersion.VERSION_1_8\r\n        targetCompatibility = JavaVersion.VERSION_1_8\r\n    }\r\n    kotlinOptions {\r\n        jvmTarget = \"1.8\"\r\n    }\r\n}\r\n\r\ndependencies {\r\n\r\n    implementation(libs.androidx.core.ktx)\r\n    implementation(libs.androidx.appcompat)\r\n    implementation(libs.material)\r\n    implementation(libs.androidx.activity)\r\n    implementation(libs.androidx.constraintlayout)\r\n    testImplementation(libs.junit)\r\n    androidTestImplementation(libs.androidx.junit)\r\n    androidTestImplementation(libs.androidx.espresso.core)\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle.kts b/app/build.gradle.kts
+--- a/app/build.gradle.kts	(revision 0bcb2cfec1711bb4670d249d0b53d754b0efef18)
++++ b/app/build.gradle.kts	(date 1726674197110)
+@@ -45,4 +45,7 @@
+     testImplementation(libs.junit)
+     androidTestImplementation(libs.androidx.junit)
+     androidTestImplementation(libs.androidx.espresso.core)
++    implementation("androidx.navigation:navigation-fragment-ktx:2.8.0")
++    implementation(libs.androidx.navigation.ui.ktx)
++
+ }
+\ No newline at end of file
+Index: gradle/libs.versions.toml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>[versions]\r\nagp = \"8.5.2\"\r\nkotlin = \"1.9.0\"\r\ncoreKtx = \"1.13.1\"\r\njunit = \"4.13.2\"\r\njunitVersion = \"1.2.1\"\r\nespressoCore = \"3.6.1\"\r\nappcompat = \"1.7.0\"\r\nmaterial = \"1.12.0\"\r\nactivity = \"1.9.2\"\r\nconstraintlayout = \"2.1.4\"\r\n\r\n[libraries]\r\nandroidx-core-ktx = { group = \"androidx.core\", name = \"core-ktx\", version.ref = \"coreKtx\" }\r\njunit = { group = \"junit\", name = \"junit\", version.ref = \"junit\" }\r\nandroidx-junit = { group = \"androidx.test.ext\", name = \"junit\", version.ref = \"junitVersion\" }\r\nandroidx-espresso-core = { group = \"androidx.test.espresso\", name = \"espresso-core\", version.ref = \"espressoCore\" }\r\nandroidx-appcompat = { group = \"androidx.appcompat\", name = \"appcompat\", version.ref = \"appcompat\" }\r\nmaterial = { group = \"com.google.android.material\", name = \"material\", version.ref = \"material\" }\r\nandroidx-activity = { group = \"androidx.activity\", name = \"activity\", version.ref = \"activity\" }\r\nandroidx-constraintlayout = { group = \"androidx.constraintlayout\", name = \"constraintlayout\", version.ref = \"constraintlayout\" }\r\n\r\n[plugins]\r\nandroid-application = { id = \"com.android.application\", version.ref = \"agp\" }\r\njetbrains-kotlin-android = { id = \"org.jetbrains.kotlin.android\", version.ref = \"kotlin\" }\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/gradle/libs.versions.toml b/gradle/libs.versions.toml
+--- a/gradle/libs.versions.toml	(revision 0bcb2cfec1711bb4670d249d0b53d754b0efef18)
++++ b/gradle/libs.versions.toml	(date 1726674197125)
+@@ -9,9 +9,11 @@
+ material = "1.12.0"
+ activity = "1.9.2"
+ constraintlayout = "2.1.4"
++navigationUiKtx = "2.8.0"
+ 
+ [libraries]
+ androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
++androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigationUiKtx" }
+ junit = { group = "junit", name = "junit", version.ref = "junit" }
+ androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+ androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
