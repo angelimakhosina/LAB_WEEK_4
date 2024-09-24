@@ -19,32 +19,26 @@ val TABS_FIXED = listOf(
 
 class CafeFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cafe_detail, container, false)
+        return inflater.inflate(R.layout.fragment_cafe, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Inisialisasi ViewPager2 dan TabLayout
         val viewPager = view.findViewById<ViewPager2>(R.id.view_pager)
         val tabLayout = view.findViewById<TabLayout>(R.id.tab_layout)
 
-        // Set Adapter untuk ViewPager2
-        val adapter = CafeAdapter(childFragmentManager, viewLifecycleOwner.lifecycle)
+        val adapter = CafeAdapter(childFragmentManager, lifecycle, requireContext())
         viewPager.adapter = adapter
 
-        // Hubungkan TabLayout dengan ViewPager2 menggunakan TabLayoutMediator
+        // Connect TabLayout with ViewPager2 using TabLayoutMediator
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = getString(TABS_FIXED[position])
         }.attach()
     }
 }
+
