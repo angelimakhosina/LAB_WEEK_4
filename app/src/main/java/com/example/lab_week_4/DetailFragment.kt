@@ -1,4 +1,4 @@
-package com.example.lab_week_03
+package com.example.lab_week_4
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,8 +8,6 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import com.example.lab_week_4.ListFragment
-import com.example.lab_week_4.R
 
 class DetailFragment : Fragment() {
 
@@ -68,6 +66,11 @@ class DetailFragment : Fragment() {
             }
 
             R.id.coldbrew -> {
+                coffeeTitle?.text = getString(R.string.coldbrew_title)
+                coffeeDesc?.text = getString(R.string.coldbrew_desc)
+            }
+
+            R.id.tes -> {
                 coffeeTitle?.text = getString(R.string.coldbrew_title)
                 coffeeDesc?.text = getString(R.string.coldbrew_desc)
             }
