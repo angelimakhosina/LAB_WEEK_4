@@ -34,7 +34,7 @@ class ListFragment : Fragment() {
                 val fragmentBundle = Bundle().apply {
                     putInt(COFFEE_ID, coffee.id)
                 }
-                Navigation.findNavController(it).navigate(R.id.coffeeDetail, fragmentBundle)
+                Navigation.findNavController(it).navigate(R.id.detailFragment, fragmentBundle)
             }
         }
     }
