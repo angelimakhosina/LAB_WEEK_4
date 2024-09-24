@@ -70,11 +70,6 @@ class DetailFragment : Fragment() {
                 coffeeDesc?.text = getString(R.string.coldbrew_desc)
             }
 
-            R.id.tes -> {
-                coffeeTitle?.text = getString(R.string.coldbrew_title)
-                coffeeDesc?.text = getString(R.string.coldbrew_desc)
-            }
-
             else -> {
                 // Menangani jika ID kopi tidak dikenal
             }
